@@ -1,0 +1,9 @@
+{
+    "author": "Stef Dawson",
+    "author_uri": "http:\/\/stefdawson.com\/",
+    "version": "0.11",
+    "description": "Add and manage TXP tabs",
+    "type": 1,
+    "order": 5,
+    "flags": 2
+}
