@@ -1,0 +1,34 @@
+#@admin
+#@language en-gb
+smd_tabber_all_pubs => All publishers
+smd_tabber_area => Assign to area:
+smd_tabber_cancel => [Cancel]
+smd_tabber_choose => Select tab to edit:
+smd_tabber_created => Tab created. Refresh to see it
+smd_tabber_deleted => Tab deleted. Refresh to see changes
+smd_tabber_exists => Tab already exists
+smd_tabber_heading => Manage additional TXP tabs
+smd_tabber_name => Tab name:
+smd_tabber_need_area => Please supply a location for the tab
+smd_tabber_need_name => Please supply a tab name
+smd_tabber_new_area => New area >>
+smd_tabber_new_tab => New tab
+smd_tabber_page => Page template:
+smd_tabber_parse_depth => Parse depth
+smd_tabber_prefs => Preferences
+smd_tabber_prefs_lbl => Tabber preferences
+smd_tabber_prefs_some_explain => This is either a new installation or a different version.br.of the plugin to one you had before.
+smd_tabber_prefs_some_opts => Click "Install table" to add or update the table.br.leaving all existing data untouched.
+smd_tabber_prefs_some_tbl => Not all table info available.
+smd_tabber_view_privs => View privileges:
+smd_tabber_saved => Tab saved. Refresh to see changes
+smd_tabber_sort_order => Sort order:
+smd_tabber_style => Stylesheet:
+smd_tabber_tab_name => Manage tabs
+smd_tabber_tab_prefix => Page/Style prefix
+smd_tabber_tab_privs => Permit tabs to be managed by
+smd_tabber_tbl_installed => Table installed
+smd_tabber_tbl_install_lbl => Install table
+smd_tabber_tbl_not_installed => Table NOT installed
+smd_tabber_tbl_not_removed => Table NOT removed
+smd_tabber_tbl_removed => Table removed
