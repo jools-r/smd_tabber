@@ -1,155 +1,152 @@
-<div id="smd_help">
+<h1>smd_tabber</h1>
 
-	<h1 id="smd_tabber_top">smd_tabber</h1>
+<p>Create and manage your own <span class="caps">TXP</span> tabs/sub-tabs, populating them with any content you wish for your users. Content and <span class="caps">CSS</span> are controlled by regular Textpattern Pages/Stylesheets. Acts like a multi-user, multi-tab dashboard for your admin-side users.</p>
 
-	<p>Create and manage your own <span class="caps">TXP</span> tabs/sub-tabs, populating them with any content you wish for your users. Content and <span class="caps">CSS</span> are controlled by regular Textpattern Pages/Stylesheets. Acts like a multi-user, multi-tab dashboard for your admin-side users.</p>
+<h2> Features</h2>
 
-	<h2 id="smd_tabber_feat">Features:</h2>
+<ul>
+	<li>Define new primary or secondary tabs in your menu hierarchy</li>
+	<li>Assign a Page and a Style to menu items</li>
+	<li>Two convenience tags allow you to add Edit links in your markup for quick access to edit the tab’s content</li>
+</ul>
 
-	<ul>
-		<li>Define new primary or secondary tabs in your menu hierarchy</li>
-		<li>Assign a Page and a Style to menu items</li>
-		<li>Two convenience tags allow you to add Edit links in your markup for quick access to edit the tab&#8217;s content</li>
-	</ul>
 
-	<h2>Author / credits</h2>
+<h2>Author / credits</h2>
 
-	<p>Written by <a href="http://stefdawson.com/contact">Stef Dawson</a>. Spawned from an idea by maverick, with thanks. Kudos to the feedback from the beta test team &#8212; maruchan and maverick &#8212; who put up with endless new versions a day until I got it right.</p>
+<p>Written by <a href="https://stefdawson.com/contact">Stef Dawson</a>. Spawned from an idea by maverick, with thanks. Kudos to the feedback from the beta test team – maruchan and maverick – who put up with endless new versions a day until I got it right.</p>
 
-	<h2>Installation / uninstallation</h2>
+<h2>Installation / uninstallation</h2>
 
-	<p class="important">Requires <span class="caps">TXP</span> 4.4.0+</p>
+<p><strong>Requires <span class="caps">TXP</span> 4.4.0+</strong></p>
 
-	<p>Download the plugin from either <a href="http://textpattern.org/plugins/1216/smd_tabber">textpattern.org</a>, or the <a href="http://stefdawson.com/sw">software page</a>, paste the code into the <span class="caps">TXP</span> <em>Admin -&gt; Plugins</em> pane, install and enable the plugin. To uninstall, delete from the <em>Admin -&gt; Plugins</em> page. The table containing the extra tab definitions will be removed but your tab Pages and Stylesheets will remain.</p>
+<p>Download the plugin from either <a href="http://textpattern.org/plugins/1216/smd_tabber">textpattern.org</a>, or the <a href="http://stefdawson.com/sw">software page</a>, paste the code into the <span class="caps">TXP</span> <em>Admin&nbsp;›&nbsp;Plugins</em> pane, install and enable the plugin. To uninstall, delete from the <em>Admin&nbsp;›&nbsp;Plugins</em> page. The table containing the extra tab definitions will be removed but your tab Pages and Stylesheets will remain.</p>
 
-	<p>Visit the <a href="http://forum.textpattern.com/viewtopic.php?id=35882">forum thread</a> for more info or to report on the success or otherwise of the plugin.</p>
+<p>Visit the <a href="http://forum.textpattern.com/viewtopic.php?id=35882">forum thread</a> for more info or to report on the success or otherwise of the plugin.</p>
 
-	<h2 id="smd_tabber_usage">Usage</h2>
+<h2>Usage</h2>
 
-	<p>Visit <em>Admin-&gt;Manage tabs</em>. When there are some custom tabs defined, the dropdown beneath the heading contains a list of all your tabs, grouped by their area. Choose one of the tabs to load it into the boxes below for editing. The boxes are:</p>
+<p>Visit <em>Admin&nbsp;›&nbsp;Manage tabs</em>. When there are some custom tabs defined, the dropdown beneath the heading contains a list of all your tabs, grouped by their area. Choose one of the tabs to load it into the boxes below for editing. The boxes are:</p>
 
-	<ul>
-		<li><span class="atnm">Tab name</span> : name of your tab as it appears to your users (case sensitive)</li>
-		<li><span class="atnm">Sort order</span> : an optional value you can assign to this tab that dictates the position it will occupy in your tab sequence. Tabs are sorted by this value before being slotted into the menu</li>
-		<li><span class="atnm">Assign to area</span> : select which primary-level tab (a.k.a. the &#8220;top row&#8221; in the Classic theme) your new tab will appear under. If you want to create a new one, type it in the adjacent box (case sensitive)</li>
-		<li><span class="atnm">View privileges</span> : select the user privilege levels that are allowed to see this tab. Default: current level of logged-in user. Note that &#8216;none&#8217; is an option. This allows you to remove a menu from operation and &#8216;park&#8217; it while it is being created/edited, without fear of anyone being able to see what you are doing. When you are ready to put it into production, simply reassign it to a regular user level</li>
-		<li><span class="atnm">Page template</span> : if you have defined at least one <span class="caps">TXP</span> Page (in <em>Presentation-&gt;Pages</em>) with the designated prefix (<code>tabber_</code> by default) then you will see those pages listed here. Choose one to assign it to this tab. Click the adjacent <em>Create</em> or <em>Edit</em> link as a shortcut to <em>Presentation-&gt;Pages</em></li>
-		<li><span class="atnm">Stylesheet</span> : if you have defined at least one <span class="caps">TXP</span> Stylesheet (in <em>Presentation-&gt;Style</em>) with the designated prefix (<code>tabber_</code> by default) then you will see those sheets listed here. Choose one to assign it to this tab. Click the adjacent <em>Create</em> or <em>Edit</em> link as a shortcut to <em>Presentation-&gt;Style</em></li>
-	</ul>
 
-	<h2 id="smd_tabber_notes">Interface notes</h2>
+<ul>
+	<li><span class="atnm">Tab name</span> : name of your tab as it appears to your users (case sensitive)</li>
+	<li><span class="atnm">Sort order</span> : an optional value you can assign to this tab that dictates the position it will occupy in your tab sequence. Tabs are sorted by this value before being slotted into the menu</li>
+	<li><span class="atnm">Assign to area</span> : select which primary-level tab (a.k.a. the &#8220;top row&#8221; in the Classic theme) your new tab will appear under. If you want to create a new one, type it in the adjacent box (case sensitive)</li>
+	<li><span class="atnm">View privileges</span> : select the user privilege levels that are allowed to see this tab. Default: current level of logged-in user. Note that &#8216;none’ is an option. This allows you to remove a menu from operation and &#8216;park’ it while it is being created/edited, without fear of anyone being able to see what you are doing. When you are ready to put it into production, simply reassign it to a regular user level</li>
+	<li><span class="atnm">Page template</span> : if you have defined at least one <span class="caps">TXP</span> Page (in <em>Presentation&nbsp;›&nbsp;Pages</em>) with the designated prefix (<code>tabber_</code> by default) then you will see those pages listed here. Choose one to assign it to this tab. Click the adjacent <em>Create</em> or <em>Edit</em> link as a shortcut to <em>Presentation&nbsp;›&nbsp;Pages</em></li>
+	<li><span class="atnm">Stylesheet</span>: if you have defined at least one <span class="caps">TXP</span> Stylesheet (in <em>Presentation&nbsp;›&nbsp;Style</em>) with the designated prefix (<code>tabber_</code> by default) then you will see those sheets listed here. Choose one to assign it to this tab. Click the adjacent <em>Create</em> or <em>Edit</em> link as a shortcut to <em>Presentation&nbsp;›&nbsp;Style</em></li>
+</ul>
 
-	<h3>General</h3>
 
-	<ul>
-		<li>You need to reload the admin side after saving to see any changes</li>
-		<li>Area and Tab names are case sensitive: name them as you want your users to see the tabs</li>
-		<li>Publisher level accounts also have a <a href="#smd_tabber_prefs">[Preferences]</a> link below the header</li>
-		<li>Using smd_faux_role is a good way to quickly switch user level so you can see the tab structures you have created</li>
-	</ul>
+<h2> Interface notes</h2>
 
-	<h3>Tabs</h3>
+<h3>General</h3>
 
-	<ul>
-		<li>Alongside the tab selector of any tab you are editing is a <em>View</em> link. Click to jump straight to the selected tab</li>
-		<li>Alongside the <em>Tab name</em> box of any tab you are editing is an [x] link. Click to delete the tab</li>
-		<li>The <em>Sort order</em> allows you to arbitrarily order the tabs without having to rely on inventive tab naming strategies. If all the sort boxes are left empty, the order is determined by the alphabetic order of the tab names</li>
-		<li>Tab names must be unique &#8212; even if they occupy different areas</li>
-	</ul>
 
-	<h3>Areas</h3>
+<ul>
+	<li>You need to reload the admin side after saving to see any changes</li>
+	<li>Area and Tab names are case sensitive: name them as you want your users to see the tabs</li>
+	<li>Publisher level accounts also have a <a href="smd_tabber_prefs">[Preferences]</a> link below the header</li>
+	<li>Using smd_faux_role is a good way to quickly switch user level so you can see the tab structures you have created</li>
+</ul>
 
-	<ul>
-		<li>Areas will appear to the right of the <em>Extensions</em> tab, in alphabetical order; they (currently) cannot be positioned. If you want something to stand out, attach it to the &#8216;start&#8217; tab</li>
-		<li>Areas <span class="caps">MUST</span> have at least one sub-tab assigned to them to become visible</li>
-	</ul>
 
-	<h3>Pages and Styles</h3>
+<h3>Tabs</h3>
 
-	<ul>
-		<li>Pages and Styles must begin with your chosen prefix (Default: <code>tabber_</code>) to be selectable by the plugin. Change the prefix via the plugin&#8217;s <a href="#smd_tabber_prefs">Preferences</a></li>
-		<li>If you view the content of a tab that has no Page assigned, a default page will be used which contains &#8216;Edit Page&#8217; and &#8216;Edit Style&#8217; links</li>
-		<li>Pages and Styles can contain <span class="caps">TXP</span> tags and are parsed as if on the public side. But you don&#8217;t need a <span class="caps">DTD</span>/head/body/footer element here because they are supplied by the admin interface: you are just filling in the content between the menu and the footer</li>
-		<li>If you are using tags that automatically detect their context, you will probably have to manually specify the context when using those tags in admin-side pages</li>
-	</ul>
 
-	<h2 id="smd_tabber_prefs">Preferences</h2>
+<ul>
+	<li>Alongside the tab selector of any tab you are editing is a <em>View</em> link. Click to jump straight to the selected tab</li>
+	<li>Alongside the <em>Tab name</em> box of any tab you are editing is an [x] link. Click to delete the tab</li>
+	<li>The <em>Sort order</em> allows you to arbitrarily order the tabs without having to rely on inventive tab naming strategies. If all the sort boxes are left empty, the order is determined by the alphabetic order of the tab names</li>
+	<li>Tab names must be unique – even if they occupy different areas</li>
+</ul>
 
-	<p><strong>Permit tabs to be managed by</strong></p>
 
-	<p>By default the tab manager is only available to any user with a Publisher account. Sometimes you may want to strictly control who can or cannot add/edit tabs. If you wish to do this, select user accounts from the <em>Permit tabs to be managed by</em> list and hit Save. From that point on, only those explicit user accounts will be allowed access to the tab manager. <span class="important">Be careful not to lock yourself out</span> :-)</p>
+<h3>Areas</h3>
 
-	<p>Note that no restrictions are placed on who can edit the tab Pages and Styles: they are subject to <span class="caps">TXP</span>&#8217;s usual permissions structure so if you want to restrict access to these elements, choose suitable accounts for your users and tie them to the plugin&#8217;s prefs.</p>
+<ul>
+	<li>Areas will appear to the right of the <em>Extensions</em> tab, in alphabetical order; they (currently) cannot be positioned. If you want something to stand out, attach it to the &#8216;start’ tab</li>
+	<li>Areas <span class="caps">MUST</span> have at least one sub-tab assigned to them to become visible</li>
+</ul>
 
-	<p><strong>Page/Style prefix</strong></p>
 
-	<p>In order to be assignable to a tab, your custom pages / stylesheets must begin with a defined prefix. Set the prefix here. Default: <code>tabber_</code>.</p>
+<h3>Pages and Styles</h3>
 
-	<p><strong>Parse depth</strong></p>
+<ul>
+	<li>Pages and Styles must begin with your chosen prefix (Default: <code>tabber_</code>) to be selectable by the plugin. Change the prefix via the plugin’s <a href="smd_tabber_prefs">Preferences</a></li>
+	<li>If you view the content of a tab that has no Page assigned, a default page will be used which contains &#8216;Edit Page’ and &#8216;Edit Style’ links</li>
+	<li>Pages and Styles can contain <span class="caps">TXP</span> tags and are parsed as if on the public side. But you don’t need a <span class="caps">DTD</span>/head/body/footer element here because they are supplied by the admin interface: you are just filling in the content between the menu and the footer</li>
+	<li>If you are using tags that automatically detect their context, you will probably have to manually specify the context when using those tags in admin-side pages</li>
+</ul>
 
-	<p>Most of the time, <span class="caps">TXP</span>&#8217;s parser takes care of nested tags nicely but in some rare instances you may have, say, <code>{replacement}</code> strings inside tags inside tags and the parser might not be replacing everything. In these cases you can increase the parse depth of smd_tabber so it can dive deeper into the nested tag tree. The default is one pass, but if you wish to increase it, do so using this value.</p>
 
-	<h2 id="smd_tabber_tags">Public tags</h2>
+<h2> Preferences</h2>
 
-	<h3><code>&lt;txp:smd_tabber_edit_page /&gt;</code> and <code>&lt;txp:smd_tabber_edit_style /&gt;</code></h3>
+<p><strong>Permit tabs to be managed by</strong></p>
 
-	<p>Renders a link to the <em>Presentation-&gt;Pages</em> or <em>Presentation-&gt;Style</em> tabs, respectively, with the current page/stylesheet loaded ready for editing. If the resource doesn&#8217;t yet exist the link will take you to an empty document. You must begin the name of your page/stylesheet with your chosen prefix (see <a href="#smd_tabber_prefs">prefs</a>) for it to be picked up by the plugin.</p>
+<p>By default the tab manager is only available to any user with a Publisher account. Sometimes you may want to strictly control who can or cannot add/edit tabs. If you wish to do this, select user accounts from the <em>Permit tabs to be managed by</em> list and hit Save. From that point on, only those explicit user accounts will be allowed access to the tab manager. <span class="important">Be careful not to lock yourself out</span> :-)</p>
 
-	<p>Optional arguments:</p>
+<p>Note that no restrictions are placed on who can edit the tab Pages and Styles: they are subject to <span class="caps">TXP</span>’s usual permissions structure so if you want to restrict access to these elements, choose suitable accounts for your users and tie them to the plugin’s prefs.</p>
 
-	<ul>
-		<li><span class="atnm">name</span>: override the default name. If you want to force the link to edit a particular Page/Stylesheet, specify it here, either with or without the prefix</li>
-		<li><span class="atnm">title</span> : the title of the link. Default: <code>Edit page</code> / <code>Edit CSS</code>, respectively</li>
-		<li><span class="atnm">wraptag</span> : the (X)HTML element (without angle brackets) to surround the link, e.g. <code>wraptag=&quot;span&quot;</code>. Without this attribute set, <code>class</code> and <code>html_id</code> will do nothing. Default: unset.</li>
-		<li><span class="atnm">class</span> : the <span class="caps">CSS</span> classname to apply to the wraptag. Default: unset</li>
-		<li><span class="atnm">html_id</span> : the <span class="caps">HTML</span> id attribute to apply to the wraptag. Default: unset</li>
-	</ul>
+<p><strong>Page/Style prefix</strong></p>
 
-	<h2 id="smd_tabber_dashboards">Dashboards and compatibility</h2>
+<p>In order to be assignable to a tab, your custom pages / stylesheets must begin with a defined prefix. Set the prefix here. Default: <code>tabber_</code>.</p>
 
-	<p>There is nothing to stop you using other dashboard or menu management plugins with smd_tabber. But the open architecture of smd_tabber means that, with a bit of planning, you can probably replicate most dashboard/menu functionality and perhaps do even more with it. Here are some common things that other plugins provide and how smd_tabber can be used to deliver similar functionality:</p>
+<p><strong>Parse depth</strong></p>
 
-	<ul>
-		<li>lum_user_menu
-	<ul>
-		<li>although not as point n&#8217; click, you could create a Page with a grid of shortcuts on it. You could define an smd_macro called &#8216;lum_cell&#8217; that could take parameters to specify the icon, destination <span class="caps">URL</span>, etc. Calling that multiple times in your tab&#8217;s Page would render the menu grid. You could even wrap some cells in rvm_privileged tags to control who could see which icons</li>
-	</ul></li>
-		<li>jmd_dashboard / sed_dashboard / aro_myAdmin
-	<ul>
-		<li>you can add your own tabs under the start tab</li>
-		<li>you can recreate the edit link functionality via an smd_macro, rsx_frontend_edit, chh_admin_tags, rss_article_edit, or even a <span class="caps">TXP</span> form with txp:yield</li>
-		<li>employ upm_textile for fine-grained Textile processing inside your Pages (it&#8217;s more robust than having to escape tags-in-tags with <code>notextile.</code> or <code>==</code>). Alternatively, write your content in Articles and import them into your Pages with txp:article_custom</li>
-	</ul></li>
-		<li>esq_admin_splash
-	<ul>
-		<li>again, smd_tabber can be told to reside on its own tab and you can write your help text in a tab Page with optional upm_textile support</li>
-	</ul></li>
-	</ul>
+<p>Most of the time, <span class="caps">TXP</span>’s parser takes care of nested tags nicely but in some rare instances you may have, say, <code>{replacement}</code> strings inside tags inside tags and the parser might not be replacing everything. In these cases you can increase the parse depth of smd_tabber so it can dive deeper into the nested tag tree. The default is one pass, but if you wish to increase it, do so using this value.</p>
 
-	<p>If none of the above appeals, you can of course mix smd_tabber with other tab-making plugins but please be aware that each plugin does things in their own way and methods of manipulating menus vary greatly. Therefore, if you experience odd menu bar behaviour you may consider switching off various combinations of such plugins to track down what&#8217;s going on.</p>
+<h2> Public tags</h2>
 
-	<h2 id="smd_tabber_changelog">Changelog</h2>
+<h3><code>&lt;txp:smd_tabber_edit_page /&gt;</code> and <code>&lt;txp:smd_tabber_edit_style /&gt;</code></h3>
 
-	<p>31 Mar 11 | 0.10 | Initial public release<br />
+<p>Renders a link to the <em>Presentation&nbsp;›&nbsp;Pages</em> or <em>Presentation&nbsp;›&nbsp;Style</em> tabs, respectively, with the current page/stylesheet loaded ready for editing. If the resource doesn’t yet exist the link will take you to an empty document. You must begin the name of your page/stylesheet with your chosen prefix (see <a href="smd_tabber_prefs">prefs</a>) for it to be picked up by the plugin.</p>
+
+<p>Optional arguments:</p>
+
+<ul>
+	<li><span class="atnm">name</span>: override the default name. If you want to force the link to edit a particular Page/Stylesheet, specify it here, either with or without the prefix</li>
+	<li><span class="atnm">title</span> : the title of the link. Default: <code>Edit page</code> / <code>Edit CSS</code>, respectively</li>
+	<li><span class="atnm">wraptag</span> : the (X)HTML element (without angle brackets) to surround the link, e.g. <code>wraptag=&amp;quot;span&amp;quot;</code>. Without this attribute set, <code>class</code> and <code>html_id</code> will do nothing. Default: unset.</li>
+	<li><span class="atnm">class</span> : the <span class="caps">CSS</span> classname to apply to the wraptag. Default: unset</li>
+	<li><span class="atnm">html_id</span> : the <span class="caps">HTML</span> id attribute to apply to the wraptag. Default: unset</li>
+</ul>
+
+
+<h2> Dashboards and compatibility</h2>
+
+<p>There is nothing to stop you using other dashboard or menu management plugins with smd_tabber. But the open architecture of smd_tabber means that, with a bit of planning, you can probably replicate most dashboard/menu functionality and perhaps do even more with it. Here are some common things that other plugins provide and how smd_tabber can be used to deliver similar functionality:</p>
+
+
+<ul>
+	<li>lum_user_menu</li>
+</ul>
+
+<ul>
+	<li>although not as point n’ click, you could create a Page with a grid of shortcuts on it. You could define an smd_macro called &#8216;lum_cell’ that could take parameters to specify the icon, destination <span class="caps">URL</span>, etc. Calling that multiple times in your tab’s Page would render the menu grid. You could even wrap some cells in rvm_privileged tags to control who could see which icons</li>
+</ul>
+
+<ul>
+	<li>jmd_dashboard / sed_dashboard / aro_myAdmin</li>
+</ul>
+
+<ul>
+	<li>you can add your own tabs under the start tab</li>
+	<li>you can recreate the edit link functionality via an smd_macro, rsx_frontend_edit, chh_admin_tags, rss_article_edit, or even a <span class="caps">TXP</span> form with txp:yield</li>
+	<li>employ upm_textile for fine-grained Textile processing inside your Pages (it’s more robust than having to escape tags-in-tags with <code>notextile.</code> or <code>==</code>). Alternatively, write your content in Articles and import them into your Pages with txp:article_custom</li>
+</ul>
+
+<ul>
+	<li>esq_admin_splash</li>
+</ul>
+
+<ul>
+	<li>again, smd_tabber can be told to reside on its own tab and you can write your help text in a tab Page with optional upm_textile support</li>
+</ul>
+
+<p>If none of the above appeals, you can of course mix smd_tabber with other tab-making plugins but please be aware that each plugin does things in their own way and methods of manipulating menus vary greatly. Therefore, if you experience odd menu bar behaviour you may consider switching off various combinations of such plugins to track down what’s going on.</p>
+
+<h2> Changelog</h2>
+
+<p>31 Mar 11 | 0.10 | Initial public release<br />
 31 Mar 11 | 0.11 | Imported <code>$pretext</code> to prevent warnings when using article tags (thanks redbot) ; improved documentation clarity</p>
-
-</div>
-<!-- *** BEGIN PLUGIN CSS *** -->
-<style type="text/css">
-#smd_help { line-height:1.5 ;}
-#smd_help code { font-weight:bold; font: 105%/130% "Courier New", courier, monospace; background-color: #f0e68c; color:#333; }
-#smd_help code.block { font-weight:normal; border:1px dotted #999; display:block; margin:10px 10px 20px; padding:10px; }
-#smd_help h1 { font: 20px Georgia, sans-serif; margin: 0; text-align: center; }
-#smd_help h2 { border-bottom: 1px solid black; padding:10px 0 0; font: 17px Georgia, sans-serif; }
-#smd_help h3 { font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0; text-decoration:underline;}
-#smd_help h4 { font: bold 11px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0 ;text-transform: uppercase; }
-#smd_help .atnm { font-weight:bold; }
-#smd_help .mand { background:#eee; border:1px dotted #999; }
-#smd_help table { width:90%; text-align:center; padding-bottom:1em; border-collapse:collapse; }
-#smd_help td, #smd_help th { border:1px solid #999; padding:.5em; }
-#smd_help ul { list-style-type:square; }
-#smd_help .important { color:red; }
-#smd_help li { margin:5px 20px 5px 30px; }
-#smd_help .break { margin-top:5px; }
-</style>
-<!-- *** END PLUGIN CSS *** -->
