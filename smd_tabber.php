@@ -116,11 +116,11 @@ function smd_tabber_welcome($evt, $stp) {
 	$msg = '';
 	switch ($stp) {
 		case 'installed':
-			smd_tabber_table_install(0);
+			smd_tabber_table_install();
 			$msg = 'Supertabs are go!';
 			break;
 		case 'deleted':
-			smd_tabber_table_remove(0);
+			smd_tabber_table_remove();
 			break;
 	}
 	return $msg;
@@ -450,101 +450,50 @@ function smd_tabber_multi_select($name, $items, $sel=array(), $size='7') {
 
 // ------------------------
 // Add tabber table if not already installed
-function smd_tabber_table_install($showpane='1') {
-	$GLOBALS['txp_err_count'] = 0;
-	$ret = '';
-	$sql = array();
-	$sql[] = "CREATE TABLE IF NOT EXISTS `".PFX.SMD_TABBER."` (
-		`name` varchar(32) NOT NULL default '' COLLATE utf8_general_ci,
-		`sort_order` varchar(32) NULL default '' COLLATE utf8_general_ci,
-		`area` varchar(32) NULL default '' COLLATE utf8_general_ci,
-		`view_privs` varchar(32) NOT NULL default '',
-		`page` varchar(32) NULL default '',
-		`style` varchar(32) NULL default '',
+function smd_tabber_table_install() {
+	safe_create('smd_tabber', "
+		name		VARCHAR(32) NOT NULL DEFAULT '',
+		sort_order VARCHAR(32) 	NULL DEFAULT '',
+		area		VARCHAR(32) 	NULL DEFAULT '',
+		view_privs VARCHAR(32) NOT NULL DEFAULT '',
+		page		VARCHAR(32) 	NULL DEFAULT '',
+		style		VARCHAR(32) 	NULL DEFAULT '',
+
 		PRIMARY KEY (`name`)
-	) ENGINE=MyISAM";
-
-	if(gps('debug')) {
-		dmp($sql);
-	}
-	foreach ($sql as $qry) {
-		$ret = safe_query($qry);
-		if ($ret===false) {
-			$GLOBALS['txp_err_count']++;
-			echo "<b>".$GLOBALS['txp_err_count'].".</b> ".mysql_error()."<br />\n";
-			echo "<!--\n $qry \n-->\n";
-		}
-	}
-
-	// Upgrade: be kind to beta testers
-	$flds = getThings('describe `'.PFX.SMD_TABBER.'`');
-	if (!in_array('sort_order',$flds)) {
-		safe_alter(SMD_TABBER, "add `sort_order` varchar(32) NULL default '' COLLATE utf8_general_ci after `name`");
-	}
-
-	// Spit out results
-	if ($GLOBALS['txp_err_count'] == 0) {
-		if ($showpane) {
-			$msg = gTxt('smd_tabber_tbl_installed');
-			smd_tabber($msg);
-		}
-	} else {
-		if ($showpane) {
-			$msg = gTxt('smd_tabber_tbl_not_installed');
-			smd_tabber($msg);
-		}
-	}
+	");
 }
 
 // ------------------------
 // Drop table if in database
-function smd_tabber_table_remove($showpane='1') {
-	$ret = '';
-	$sql = array();
-	$GLOBALS['txp_err_count'] = 0;
-	$sql[] = "DROP TABLE IF EXISTS " .PFX.SMD_TABBER. "; ";
-	if(gps('debug')) {
-		dmp($sql);
-	}
-	foreach ($sql as $qry) {
-		$ret = safe_query($qry);
-		if ($ret===false) {
-			$GLOBALS['txp_err_count']++;
-			echo "<b>".$GLOBALS['txp_err_count'].".</b> ".mysql_error()."<br />\n";
-			echo "<!--\n $qry \n-->\n";
-		}
-	}
-	if ($GLOBALS['txp_err_count'] == 0) {
-		if ($showpane) {
-			$msg = gTxt('smd_tabber_tbl_removed');
-		}
-	} else {
-		if ($showpane) {
-			$msg = gTxt('smd_tabber_tbl_not_removed');
-			smd_tabber($msg);
-		}
-	}
+function smd_tabber_table_remove() {
+	safe_drop('smd_tabber');
 }
 
 // ------------------------
 function smd_tabber_table_exist($all='') {
-	if ($all) {
-		$tbls = array(SMD_TABBER => 6);
-		$out = count($tbls);
-		foreach ($tbls as $tbl => $cols) {
-			if (gps('debug')) {
-				echo "++ TABLE ".$tbl." HAS ".count(@safe_show('columns', $tbl))." COLUMNS; REQUIRES ".$cols." ++".br;
-			}
-			if (count(@safe_show('columns', $tbl)) == $cols) {
-				$out--;
-			}
-		}
-		return ($out===0) ? 1 : 0;
+	if (function_exists('safe_exists')) {
+		if (safe_exists('smd_tabber')) {
+			return true;
+		};
 	} else {
-		if (gps('debug')) {
-			echo "++ TABLE ".SMD_TABBER." HAS ".count(@safe_show('columns', SMD_tabber))." COLUMNS;";
+		if ($all) {
+			$tbls = array(SMD_TABBER => 6);
+			$out = count($tbls);
+			foreach ($tbls as $tbl => $cols) {
+				if (gps('debug')) {
+					echo "++ TABLE ".$tbl." HAS ".count(@safe_show('columns', $tbl))." COLUMNS; REQUIRES ".$cols." ++".br;
+				}
+				if (count(@safe_show('columns', $tbl)) == $cols) {
+					$out--;
+				}
+			}
+			return ($out===0) ? 1 : 0;
+		} else {
+			if (gps('debug')) {
+				echo "++ TABLE ".SMD_TABBER." HAS ".count(@safe_show('columns', SMD_tabber))." COLUMNS;";
+			}
+			return(@safe_show('columns', SMD_TABBER));
 		}
-		return(@safe_show('columns', SMD_TABBER));
 	}
 }
 
